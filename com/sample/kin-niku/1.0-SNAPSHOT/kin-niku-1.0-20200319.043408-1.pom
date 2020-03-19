@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.sample</groupId>
+<artifactId>kin-niku</artifactId>
+<packaging>jar</packaging>
+<version>1.0-SNAPSHOT</version>
+<name>kin-niku</name>
+<url>http://maven.apache.org</url>
+<dependencies>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.2.1</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <mainClass>com.sample.App</mainClass>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.7.1</version>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-project-info-reports-plugin</artifactId>
+            <version>3.0.0</version>
+        </plugin>
+        <plugin>
+            <groupId>com.github.github</groupId>
+            <artifactId>site-maven-plugin</artifactId>
+            <version>0.12</version>
+            <configuration>
+                <repositoryName>kin-niku</repositoryName>
+                <repositoryOwner>cm-furusawa</repositoryOwner>
+                <message>Creating site for ${project.version}</message>
+                <userName>cm-furusawa</userName>
+                <outputDirectory>mvn-repo</outputDirectory>
+                <branch>refs/heads/mvn-repo</branch>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>site</goal>
+                    </goals>
+                    <phase>site</phase>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <github.global.server>github</github.global.server>
+    <git.branchName>mvn-repo</git.branchName>
+    <git.isMerge>true</git.isMerge>
+</properties>
+<distributionManagement>
+    <repository>
+        <id>internal.repo</id>
+        <name>Temporary Staging Repository</name>
+        <url>file:///Users/furusawa.toyoki/study/mvn/prj_1/kin-niku/mvn-repo</url>
+    </repository>
+</distributionManagement>
+</project>
