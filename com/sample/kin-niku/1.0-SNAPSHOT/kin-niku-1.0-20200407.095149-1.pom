@@ -64,7 +64,7 @@
                         <repositoryName>mvn-repo</repositoryName>
                         <repositoryOwner>cm-furusawa</repositoryOwner>
                         <message>Creating site</message>
-                        <outputDirectory>mvn-repo</outputDirectory>
+                        <outputDirectory>./mvn-repo</outputDirectory>
                         <branch>refs/heads/master</branch>
                         <path></path>
                         <merge>ture</merge>
