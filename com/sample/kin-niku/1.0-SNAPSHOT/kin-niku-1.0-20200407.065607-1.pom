@@ -16,6 +16,10 @@
         <scope>test</scope>
     </dependency>
 </dependencies>
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <github.global.server>github</github.global.server>
+</properties>
 <build>
     <plugins>
         <plugin>
@@ -60,7 +64,7 @@
                         <repositoryOwner>cm-furusawa</repositoryOwner>
                         <message>Creating site</message>
                         <outputDirectory>mvn-repo</outputDirectory>
-                        <branch>refs/heads/mvn-repo</branch>
+                        <branch>refs/heads/master</branch>
                         <path></path>
                         <merge>ture</merge>
                     </configuration>
@@ -69,13 +73,6 @@
         </plugin>
     </plugins>
 </build>
-<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- <maven.compiler.source>1.8</maven.compiler.source> -->
-    <!-- <maven.compiler.target>1.8</maven.compiler.target> -->
-    <github.global.server>github</github.global.server>
-    <!-- <git.branchName>mvn-repo</git.branchName> -->
-</properties>
 <distributionManagement>
     <repository>
         <id>internal.repo</id>
