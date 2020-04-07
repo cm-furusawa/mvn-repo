@@ -37,7 +37,6 @@
                 <mainClass>com.sample.App</mainClass>
             </configuration>
         </plugin>
-<!-- 依存関係ここから -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-site-plugin</artifactId>
@@ -48,7 +47,6 @@
             <artifactId>maven-project-info-reports-plugin</artifactId>
             <version>3.0.0</version>
         </plugin>
-<!-- ここまで -->
         <plugin>
             <groupId>com.github.github</groupId>
             <artifactId>site-maven-plugin</artifactId>
