@@ -17,8 +17,9 @@
     </dependency>
 </dependencies>
 <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <github.global.server>github</github.global.server>
+    <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+    <!-- <github.global.server>github</github.global.server> -->
+    <localRepository>file:///Users/furusawa.toyoki/study/mvn/prj_1/kin-niku/mvn-repo</localRepository>
 </properties>
 <build>
     <plugins>
@@ -88,8 +89,8 @@
 <distributionManagement>
     <repository>
         <id>internal.repo</id>
-        <name>Temporary Staging Repository</name>
-        <url>file:///Users/furusawa.toyoki/study/mvn/prj_1/kin-niku/mvn-repo</url>
+        <name>Temporary Repository</name>
+        <url>${localRepository}</url>
     </repository>
 </distributionManagement>
 </project>
