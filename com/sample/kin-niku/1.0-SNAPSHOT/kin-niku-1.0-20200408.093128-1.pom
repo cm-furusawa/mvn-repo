@@ -17,8 +17,8 @@
     </dependency>
 </dependencies>
 <properties>
-    <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
-    <!-- <github.global.server>github</github.global.server> -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <github.global.server>github</github.global.server>
     <localRepository>file:///Users/furusawa.toyoki/study/mvn/prj_1/kin-niku/mvn-repo</localRepository>
 </properties>
 <build>
@@ -43,7 +43,7 @@
             <artifactId>maven-site-plugin</artifactId>
             <version>3.7.1</version>
             <configuration>
-                <locales>ja</locales>
+                <locales>ja_jp</locales>
                 <inputEncoding>UTF-8</inputEncoding>
                 <outputEncoding>UTF-8</outputEncoding>
                 <outputDirectory>mvn-repo</outputDirectory>
